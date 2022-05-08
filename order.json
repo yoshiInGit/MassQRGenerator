@@ -1,0 +1,16 @@
+{
+    "default":{
+        "fileName"  : "qrCode",
+        "data"      : "default text",
+        "logoImg"   : "",
+        "color"     : "black",
+        "errorCorrection" : "H",
+        "version"   : 12,
+        "boxSize"   : 10,
+        "border"    : 4
+    },
+    
+    "order":[
+
+    ]
+}
