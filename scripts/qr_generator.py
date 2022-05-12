@@ -1,7 +1,7 @@
 from PIL import Image
 import qrcode
 import sys
-from copy import copy
+import copy
 from scripts.statics import QR_PROP_NAMES
 
 
@@ -30,20 +30,22 @@ class QRGenerator:
         qr.make()
 
         QRimg = qr.make_image(fill_color=prop["color"], back_color="white").convert('RGB')
-        logo = Image.open("../logoImg/"+prop["logoImg"])
 
-        # position of logo (center)
-        pos = (
-            (QRimg.size[0] - logo.size[0]) // 2,
-            (QRimg.size[1] - logo.size[1]) // 2,
-        )
 
-        QRimg.paste(logo, pos)
+        # logo = Image.open("../logoImg/"+prop["logoImg"])
+
+        # # position of logo (center)
+        # pos = (
+        #     (QRimg.size[0] - logo.size[0]) // 2,
+        #     (QRimg.size[1] - logo.size[1]) // 2,
+        # )
+
+        # QRimg.paste(logo, pos)
 
         return QRimg
 
         
-    def _getErrorConection(str):
+    def _getErrorConection(self ,str):
         if(str=="L"):
             return qrcode.ERROR_CORRECT_L
         if(str=="M"):

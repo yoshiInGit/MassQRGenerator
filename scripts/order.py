@@ -1,5 +1,4 @@
-from scripts.statics import QR_PROP_NAME
-import statics
+from scripts.statics import QR_PROP_NAMES
 import sys
 
 class Order:
@@ -8,7 +7,7 @@ class Order:
         self.order         = order_dict["order"]
         
         # check if necessary info is written
-        for key in statics.QR_PROP_NAMES:
+        for key in QR_PROP_NAMES:
             if key in self.default_props:
                 None
             else:

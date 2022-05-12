@@ -14,9 +14,10 @@ def main():
 
 def delete_output():
     shutil.rmtree("output/")
+    os.mkdir("output/")
 
 def read_order():
-    with open("order.js") as order_file:
+    with open("order.json") as order_file:
         order_dict = json.load(order_file)
     
     return Order(order_dict=order_dict)
@@ -36,9 +37,9 @@ def generate_qr(order):
         # if this file name is already exist
         if os.path.exists("./output/"+file_name+".png"):
             count = 1
-            while os.path.exists("./output/"+file_name+"_"+(count+1)+".png"):
+            while os.path.exists("./output/"+file_name+"_"+str(count+1)+".png"):
                 count += 1
-            img.save("./output/" + file_name+"_"+count+".png")
+            img.save("./output/" + file_name+"_"+str(count)+".png")
         else:
             img.save("./output/"+file_name+".png")
 
