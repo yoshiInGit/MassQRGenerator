@@ -2,7 +2,7 @@
     "default":{
         "fileName"  : "qrCode",
         "data"      : "default text",
-        "logoImg"   : "",
+        "logoImg"   : "sample.png",
         "color"     : "black",
         "errorCorrection" : "H",
         "version"   : 12,
@@ -12,11 +12,16 @@
     
     "order":[
         {
-            "fileName":"1"
+            "fileName":"logo",
+            "data":"default text1"
         },{
-            "fileName":"1"
+            "fileName":"logo",
+            "data":"default text2"
+
         },{
-            "fileName":"3"
+            "fileName":"logo",
+            "data":"default text3"
+
         }
     ]
 }

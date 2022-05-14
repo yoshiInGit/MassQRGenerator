@@ -4,7 +4,7 @@ import sys
 class Order:
     def __init__(self, order_dict):
         self.default_props = order_dict["default"]
-        self.order         = order_dict["order"]
+        self.requests        = order_dict["order"]
         
         # check if necessary info is written
         for key in QR_PROP_NAMES:
